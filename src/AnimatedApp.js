@@ -8,23 +8,12 @@ import ExperienceScreen from './screens/ExperienceScreen';
 import ContactScreen from './screens/ContactScreen';
 import AnimatedSwitch from './components/AnimatedSwitch';
 
+import Header from './components/Header';
+
 const AnimatedApp = props => {
     return (
         <>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/projects">Projects</Link>
-                </li>
-                <li>
-                    <Link to="/experience">Experience</Link>
-                </li>
-                <li>
-                    <Link to="/contact">Get in touch</Link>
-                </li>
-            </ul>
+            <Header/>
 
             <div className="content">
                 <AnimatedSwitch>
