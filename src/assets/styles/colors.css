@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #17183B;
+    --secondary-color-darker: #3A1851;
+    --secondary-color: #5C1767;
+    --secondary-color-lighter: #A11692;
+    --ternary-color-darker: #D03386;
+    --ternary-color: #FF4F79;
+    --ternary-color-lighter: #FFB49A;
+
+    --links-color: ;
+    
+    --background-color: var(--primary-color);
+    --header-nav-background-color: #fff;
+    --header-color: var(--secondary-color);
+
+    --header-menu-background: #0f0f0f;
+
+    --general-text-color: #fafafa;
+
+    -menu-link-color: #fafafa;
+    --menu-icon-color: var(--secondary-color);
+}
