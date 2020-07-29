@@ -11,9 +11,6 @@ const Header = props => {
         setMenuOpened(!menuOpened);
     }
 
-    console.log(menuOpened);
-
-
     return (
         <header>
             <Nav toggleMenu={toggleMenu} 
@@ -24,16 +21,16 @@ const Header = props => {
             <Menu isOpen={menuOpened}>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/" onClick={toggleMenu}>Home</Link>
                     </li>
                     <li>
-                        <Link to="/projects">Projects</Link>
+                        <Link to="/projects" onClick={toggleMenu}>Projects</Link>
                     </li>
                     <li>
-                        <Link to="/experience">Experience</Link>
+                        <Link to="/experience" onClick={toggleMenu}>Experience</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Get in touch</Link>
+                        <Link to="/contact" onClick={toggleMenu}>Get in touch</Link>
                     </li>
                 </ul>
             </Menu>
