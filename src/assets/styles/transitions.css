@@ -15,6 +15,39 @@
     opacity: 0;
 }
 
+.menu-icon {
+    transition: all .25s ease-in-out;
+}
+
+.menu-icon.enter{
+    transform: scale(1);
+    opacity: 1;
+}
+.menu-icon.enter-active {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-icon.enter-done {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.menu-icon.exit {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.menu-icon.exit-active {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-icon.exit-done {
+    transform: scale(1);
+    opacity: 1;
+}
+
 .slide {
     transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -54,7 +87,7 @@
 }
 
 .slide.enter ul li {
-    transform: translateX(-30%);
+    transform: translateX(-20%);
     opacity: 0;
 }
 
@@ -75,6 +108,6 @@
 }
 
 .slide.exit-active ul li {
-    transform: translateX(30%);
+    transform: translateX(20%);
     opacity: 0;
 }
