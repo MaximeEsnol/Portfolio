@@ -11,6 +11,8 @@ const Header = props => {
         setMenuOpened(!menuOpened);
     }
 
+    console.log(menuOpened);
+
 
     return (
         <header>
@@ -19,7 +21,7 @@ const Header = props => {
                 isFixedNav={true}
                 height={70}/>
 
-            <Menu>
+            <Menu isOpen={menuOpened}>
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
