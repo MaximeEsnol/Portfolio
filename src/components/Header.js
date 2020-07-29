@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import Menu from './Menu';
+import SocialLinks from './SocialLinks';
 
 const Header = props => {
 
@@ -33,6 +34,8 @@ const Header = props => {
                         <Link to="/contact" onClick={toggleMenu}>Get in touch</Link>
                     </li>
                 </ul>
+
+                <SocialLinks/>
             </Menu>
         </header>
     )
