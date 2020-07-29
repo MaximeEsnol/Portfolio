@@ -59,6 +59,7 @@ header .slide {
     z-index: 100;
     top: 70px;
     background-color: var(--header-menu-background);
+    display: none;
 }
 
 header .slide ul {
