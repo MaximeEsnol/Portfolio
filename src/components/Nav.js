@@ -22,8 +22,7 @@ const Nav = ({ toggleMenu, isOpen, isFixedNav, height }) => {
             <nav style={{ height: height + "px" }}>
                 <p>Maxime Esnol</p>
 
-
-                <Transition>
+                <Transition timeout={200}>
                     <CSSTransition
                         in={isOpen}
                         classNames=""

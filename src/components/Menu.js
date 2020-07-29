@@ -4,7 +4,7 @@ import { Transition, CSSTransition } from 'react-transition-group';
 const Menu = ({ isOpen, className, children }) => {
 
     return (
-        <Transition>
+        <Transition timeout={500}>
             <CSSTransition
                 in={isOpen}
                 className={"slide"}
