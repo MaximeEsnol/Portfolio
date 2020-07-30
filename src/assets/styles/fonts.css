@@ -21,3 +21,9 @@
     font-weight: 400;
     src: url(../fonts//Heebo-Regular.ttf);
 }
+
+@font-face {
+    font-family: "Questrial";
+    font-weight: 400;
+    src: url(../fonts/Questrial-Regular.ttf);
+}
