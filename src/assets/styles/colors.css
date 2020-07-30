@@ -8,6 +8,8 @@
     --ternary-color-lighter: #FFB49A;
 
     --links-color: ;
+
+    --divider-color: #aaabbf;
     
     --background-color: var(--primary-color);
     --header-nav-background-color: #fff;
@@ -16,7 +18,10 @@
     --header-menu-background: #0f0f0f;
 
     --general-text-color: #fafafa;
+    --general-text-color-less: #aaabbf;
 
     -menu-link-color: #fafafa;
     --menu-icon-color: var(--secondary-color);
+
+    --card-background-color: #f2f2f2;
 }
