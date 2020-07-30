@@ -10,20 +10,62 @@ html, body {
 
     background-color: var(--background-color);
     color: var(--general-text-color);
+    font-family: "Questrial";
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Heebo";
+    font-family: "Questrial";
 }
 
 h1 {
+    font-size: 2.2rem;
     font-weight: 500;
+}
+
+.container {
+    position: relative;
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.home h1.multiline .line:first-child {
+    color: var(--general-text-color-less);
+}
+
+.home h1 {
+    border-bottom: solid 1px var(--divider-color);
+    width: 80%;
+    margin-bottom: 0;
+}
+
+.home h1 + p {
+    margin-top: .7rem;
+}
+
+.home p {
+    width: 80%;
+}
+
+.home > section {
+    height: 100vh;
+    padding: 0 2.5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.home > section:first-child {
+    height: calc(100vh - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -31,8 +73,18 @@ h1 {
     overflow-x: hidden;
 }
 
+.multiline {
+    display: block;
+}
+
+.multiline > .line {
+    display: block;
+    margin: 10px 0;
+}
+
 header nav {
     position: fixed;
+    z-index: 15;
     width: 100%;
     top: 0;
     left: 0;
