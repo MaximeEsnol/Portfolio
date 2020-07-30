@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import useTitle from '../hooks/useTitle';
 
 const ContactScreen = props => {
+    const hasMounted = useRef(false);
+
+    useTitle("Contact me - Maxime Esnol");
 
     return( 
         <div>

@@ -1,6 +1,9 @@
 import React from 'react';
+import useTitle from '../hooks/useTitle';
 
 const ExperienceScreen = props => {
+
+    useTitle("Experience - Maxime Esnol");
 
     return(
         <div>
