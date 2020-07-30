@@ -1,14 +1,13 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SocialIcon = ( { social } ) => {
 
-    const { url, icon } = social;
+    const { url, icon, accent } = social;
 
     return (
         <li>
-            <a href={url}>
-                <FontAwesomeIcon icon={"github"}/>
+            <a href={url} accentcolor={accent}>
+                <i className={icon}></i>
             </a>
         </li>
     )
