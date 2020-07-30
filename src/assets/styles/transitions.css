@@ -53,7 +53,7 @@
 }
 
 .slide.enter {
-    display: block !important;
+    display: flex !important;
     transform: translateX(100%);
 }
 
@@ -63,12 +63,12 @@
 
 .slide.enter-done {
     transform: translateX(0);
-    display: block;
+    display: flex;
 }
 
 .slide.exit {
     transition-delay: .2s;
-    display: block;
+    display: flex;
     transform: translateX(0);
 }
 
