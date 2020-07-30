@@ -1,6 +1,7 @@
 @import url(./assets/styles/fonts.css);
 @import url(./assets//styles/colors.css);
 @import url(./assets/styles/transitions.css);
+@import url(./assets/icons/fontawesome.min.css);
 
 html, body {
     margin: 0;
@@ -60,6 +61,8 @@ header .slide {
     top: 70px;
     background-color: var(--header-menu-background);
     display: none;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header .slide ul {
@@ -71,6 +74,21 @@ header .slide ul li {
     line-height: 4rem;
     font-size: 1.4rem;
     text-align: center;
+}
+
+header .slide .social-links {
+    margin: 0 auto;
+    width: 80%;
+}
+
+header .slide .social-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .slide .social-links ul li {
+    margin: 0 20px;
 }
 
 header .slide a {
@@ -102,6 +120,19 @@ header .slide a:hover::after{
     transform-origin: right;
     transform: scaleX(0);
     background: var(--ternary-color);
+}
+
+header .slide .social-links a:hover::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: -5%;
+    width: 110%;
+    height: 100%;
+    transform-origin: right;
+    transform: scaleX(0);
+    background: attr("accentcolor");
 }
 
 .nav-fix-height {
