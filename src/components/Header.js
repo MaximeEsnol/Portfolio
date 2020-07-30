@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import Menu from './Menu';
@@ -20,7 +21,7 @@ const Header = props => {
                 height={70}/>
 
             <Menu isOpen={menuOpened}>
-                <ul>
+                <ul className="site-links">
                     <li>
                         <Link to="/" onClick={toggleMenu}>Home</Link>
                     </li>
