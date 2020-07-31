@@ -1,0 +1,25 @@
+[
+    {
+        "name": "OnStage",
+        "slug": "onstage",
+        "description": "View concerts near you.",
+        "technologies": [
+            "React Native",
+            "Java",
+            "Spring"
+        ],
+        "images": [
+
+        ],
+        "repository": [
+            {
+                "name": "OnStage Application",
+                "url": "https://gitlab.com/MaximeEsnol/onstage"
+            }, 
+            {
+                "name": "OnStage API",
+                "url": "https://gitlab.com/MaximeEsnol/onstagewebapp"
+            }
+        ]
+    }
+]
