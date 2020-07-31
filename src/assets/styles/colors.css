@@ -10,6 +10,8 @@
     --links-color: ;
 
     --divider-color: #aaabbf;
+    --fab-color: var(--ternary-color);
+    --fab-text-color: #ffebef;
     
     --background-color: var(--primary-color);
     --header-nav-background-color: #fff;
