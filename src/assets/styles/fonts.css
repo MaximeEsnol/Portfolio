@@ -27,3 +27,9 @@
     font-weight: 400;
     src: url(../fonts/Questrial-Regular.ttf);
 }
+
+@font-face {
+    font-family: "PT Serif";
+    font-weight: 400;
+    src: url(../fonts/PTSerif-Regular.ttf);
+}
