@@ -21,5 +21,23 @@
                 "url": "https://gitlab.com/MaximeEsnol/onstagewebapp"
             }
         ]
+    },
+    {
+        "name": "Box Shadow Generator",
+        "slug": "box-shadow",
+        "description": "Quickly and easily generate complex box shadows. The application generates the appropriate CSS on the fly. Once you find the perfect shadow, simply copy and paste the generated CSS into your own code.",
+        "technologies": [
+            "React"
+        ],
+        "images": [
+            "bsg_1.png"
+        ],
+        "repository": [
+            {
+                "name": "Box Shadow Generator",
+                "url": "https://github.com/MaximeEsnol/BoxShadowGenerator"
+            }
+        ],
+        "demo": "https://shadows.maximeesnol.dev"
     }
 ]
