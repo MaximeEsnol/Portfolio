@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import useTitle from '../hooks/useTitle';
 import Intro from './homescreen/Intro';
+import ProjectsSummary from './homescreen/ProjectsSummary';
 
 const HomeScreen = props => {
 
@@ -11,7 +12,7 @@ const HomeScreen = props => {
     const scrollTo = ref => {
         window.scrollTo({
             left: 0,
-            top: ref.current.offsetTop - 20,
+            top: ref.current.offsetTop,
             behavior: "smooth"
         });
     }
@@ -21,11 +22,8 @@ const HomeScreen = props => {
 
             <Intro onRequestScroll={scrollTo.bind(this, aboutRef)}/>
 
-            <section id="about" ref={aboutRef}>
-                <h2>
-                    Projects I've worked on
-                </h2>
-            </section>
+            <ProjectsSummary ref={aboutRef} />
+            
         </div>
     )
 }
