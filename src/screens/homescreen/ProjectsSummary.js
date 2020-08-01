@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import ReactVisibilitySensor from 'react-visibility-sensor';
 import TimedTransition from '../../components/TimedTransition';
+import { Link } from 'react-router-dom';
+import ProjectPreview from '../../components/ProjectPreview';
 
 const ProjectsSummary = React.forwardRef((props, ref) => {
 
@@ -33,33 +35,17 @@ const ProjectsSummary = React.forwardRef((props, ref) => {
             onChange={(isVisible) => onChangeVisibility(isVisible)}>
             <section ref={ref}>
                 <h2>
-                    My latest project
+                    Latest
                 </h2>
 
                 {project != null &&
-                    <TimedTransition
-                        started={true}
-                        classNames={""}
-                        duration={1000}>
-                        <div className="project-container">
-                            <div className="project">
-                                <div className="scaling-image">
-                                    <img src={process.env.PUBLIC_URL + "/images/" + project.images[0]}
-                                        alt={project.description} />
-                                </div>
-                                <div className="project-description">
-                                    <h3>
-                                        {project.name}
-                                    </h3>
-                                    <p>
-                                        {project.description}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </TimedTransition>
+                <>
+                    <ProjectPreview project={project}/>
+                    <Link to={"/projects"} className="button primary more-projects-btn">
+                        See more
+                    </Link>
+                </>
                 }
-
             </section>
         </ReactVisibilitySensor>
     )
