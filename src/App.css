@@ -64,14 +64,13 @@ h3 {
 
 .home > section {
     position: relative;
-    min-height: 100vh;
     padding: 0 2.5%;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
 .home > section:first-child {
-    height: calc(100vh - 75px);
+    min-height: calc(100vh - 75px);
     display: flex;
     flex-direction: column;
     justify-content: center;
