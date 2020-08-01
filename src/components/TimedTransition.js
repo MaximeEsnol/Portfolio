@@ -2,11 +2,11 @@ import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 const TimedTransition = ({
-    delay,
-    duration,
-    classNames,
-    started,
-    children }) => {
+    children,
+    delay = 0,
+    duration = 1000,
+    classNames = "",
+    started = false }) => {
 
     const timeout = useRef(null);
     const playingTimeout = useRef(null);
@@ -58,13 +58,10 @@ TimedTransition.propTypes = {
     delay: PropTypes.number,
     /** How long, in milliseconds, the animation lasts. */
     duration: PropTypes.number,
+    /** The name of extra classes to be given to the element once the animation is started. */
+    classNames: PropTypes.string,
     /** Child elements that will be affected by the animation. */
     children: PropTypes.element.isRequired
-}
-
-TimedTransition.defaultProps = {
-    delay: 0,
-    duration: 500,
 }
 
 export default TimedTransition;
