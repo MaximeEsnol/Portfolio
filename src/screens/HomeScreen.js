@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import useTitle from '../hooks/useTitle';
 import Intro from './homescreen/Intro';
 import ProjectsSummary from './homescreen/ProjectsSummary';
+import AboutMe from './homescreen/AboutMe';
 
 const HomeScreen = props => {
 
@@ -23,6 +24,8 @@ const HomeScreen = props => {
             <Intro onRequestScroll={scrollTo.bind(this, aboutRef)}/>
 
             <ProjectsSummary ref={aboutRef} />
+
+            <AboutMe/>
             
         </div>
     )
