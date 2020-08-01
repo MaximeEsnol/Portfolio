@@ -1,5 +1,6 @@
 :root {
     --primary-color: #17183B;
+    --primary-color-lighter: #2e225d;
     --secondary-color-darker: #3A1851;
     --secondary-color: #5C1767;
     --secondary-color-lighter: #A11692;
@@ -25,5 +26,5 @@
     -menu-link-color: #fafafa;
     --menu-icon-color: var(--secondary-color);
 
-    --card-background-color: #f2f2f2;
+    --project-card-background: #0a0b1d;
 }
