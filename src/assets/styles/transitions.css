@@ -170,18 +170,65 @@
     animation-fill-mode: forwards;
 }
 
-.project {
-    /* opacity: 0;
-    transform-origin: center;
-    transform: scale(.4); */
+.project img{
+    opacity: 0;
+    transform: scale(.4);
 }
 
-.project.playing {
-    animation: project-card-appear 1000ms cubic-bezier(0.34, 1.56, 0.64, 1);
+.project img.playing {
+    animation: project-image-appear 750ms ease-out;
     animation-fill-mode: forwards;
 }
 
-@keyframes project-card-appear {
+.project .project-description h3 {
+    opacity: 0;
+    transform: scale(1.2) translateY(200%);
+}
+
+.project .project-description h3.playing {
+    animation: project-title-appear 3000ms ease-out;
+    animation-fill-mode: forwards;
+}
+
+.project .project-description p {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.project .project-description p.playing {
+    animation: project-content-appear 1000ms ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes project-content-appear {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes project-title-appear {
+    0% {
+        opacity: 0;
+        transform: scale(1.2) translateY(200%);
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1.2) translateY(200%);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes project-image-appear {
     from {
         opacity: 0;
         transform: scale(.4);
