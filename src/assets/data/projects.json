@@ -30,7 +30,10 @@
             "React"
         ],
         "images": [
-            "bsg_1.png"
+            {
+                "src": "bsg_1.png",
+                "alt": "Screenshot of the Box Shadow Generator website."
+            }
         ],
         "repository": [
             {
