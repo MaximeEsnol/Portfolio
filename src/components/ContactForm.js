@@ -6,13 +6,14 @@ const ContactForm = ({ title }) => {
     const [ name, setName ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ message, setMessage ] = useState("");
+    const [ tags, setTags ] = useState(null);
 
     const [ mailto, setMailto ] = useState("mailto:maxime.esnol02@gmail.com");
 
     const [ buttonClass, setButtonClass ] = useState("disabled");
 
     useEffect( () => {
-        if ( message.length > 3 ) {
+        if ( message.length > 3 && name !== "" && email.includes("@") && tags == null) {
             if ( buttonClass !== "" ) {
                 setButtonClass("");
             } 
@@ -27,7 +28,7 @@ const ContactForm = ({ title }) => {
         } else {
             setButtonClass("disabled");
         }
-    }, [message]);
+    }, [message, name, email, tags]);
 
     return (
         <form className="contact">
@@ -49,7 +50,14 @@ const ContactForm = ({ title }) => {
             label="Your message" 
             onChangeText={(text) => setMessage(text)}/>
 
-            <button disabled={(buttonClass === "disabled")} className={"button primary"}>
+            <TextInput name="tags"
+            honeypot={true}
+            id="tags"
+            label="Tags for your message"
+            onChangeText={(text) => setTags(text)}/>
+
+
+            <button disabled={(buttonClass === "disabled")} type="button" className={"button primary"}>
                 Send
             </button>
         </form>

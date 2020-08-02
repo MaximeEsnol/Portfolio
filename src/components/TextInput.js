@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
-const TextInput = ( { name, id, label, onChangeText = null, defaultValue = "", type = "text"} ) => {
+const TextInput = ( { name, id, label, onChangeText = null, defaultValue = "", type = "text", honeypot = false} ) => {
 
     const [value, setValue] = useState(defaultValue);
+
+    const styles = useRef();
+
+    if ( honeypot ) {
+        styles.current = {
+            height: 0,
+            position: "absolute",
+            overflow: "hidden"
+        }
+    }
 
     const onChange = event => {
         setValue(event.target.value);
@@ -13,7 +23,7 @@ const TextInput = ( { name, id, label, onChangeText = null, defaultValue = "", t
     }
 
     return(
-        <div className="input-field">
+        <div className="input-field" style={styles.current}>
             <input type={type} 
                 id={id} 
                 name={name} 
