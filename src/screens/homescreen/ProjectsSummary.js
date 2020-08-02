@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import ReactVisibilitySensor from 'react-visibility-sensor';
-import TimedTransition from '../../components/TimedTransition';
 import { Link } from 'react-router-dom';
 import ProjectPreview from '../../components/ProjectPreview';
 
@@ -35,7 +34,7 @@ const ProjectsSummary = React.forwardRef((props, ref) => {
             onChange={(isVisible) => onChangeVisibility(isVisible)}>
             <section ref={ref}>
                 <h2>
-                    Latest
+                    Latest work
                 </h2>
 
                 {project != null &&
