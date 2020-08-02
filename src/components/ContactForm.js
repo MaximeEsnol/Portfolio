@@ -41,6 +41,7 @@ const ContactForm = ({ title }) => {
             <h3>
                 {title}
             </h3>
+            
             <TextInput name="name" 
             id="name" 
             label="Your name" 
