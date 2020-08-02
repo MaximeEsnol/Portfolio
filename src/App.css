@@ -13,9 +13,24 @@ html, body {
     font-family: "Questrial";
 }
 
+img {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
 p {
     font-size: 1.1rem;
     font-family: "PT Serif";
+}
+
+a {
+    text-decoration: none;
+    color: var(--links-color);
+}
+
+a:hover {
+    color: var(--links-color-hover);
 }
 
 h1,
@@ -98,6 +113,8 @@ h3 {
     position: relative;
     display: inline-block;
 
+    transform: translate(0,0);
+
     border: solid 4px;
     border-radius: 10px;
 
@@ -109,9 +126,24 @@ h3 {
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
+    font-family: "Questrial";
     font-weight: 600;
+    font-size: 1rem;
 
-    transition: color .5s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all .5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.button.primary[disabled] {
+    filter: brightness(.7);
+    opacity: .7;
+}
+
+.button.primary[disabled]:hover {
+    color: var(--ternary-color);
+}
+
+.button.primary[disabled]:hover::after {
+    opacity: 0;
 }
 
 .button::after {
@@ -138,6 +170,7 @@ h3 {
 }
 
 .button:hover::after {
+    content: '';
     opacity: 1;
 }
 
@@ -151,6 +184,7 @@ h3 {
 }
 
 .button.primary::after {
+    content: '';
     background-color: var(--ternary-color);
 }
 
@@ -339,4 +373,151 @@ header .slide .social-links a:hover::after {
 .more-projects-btn {
     margin-left: 50%;
     transform: translateX(-50%);
+}
+
+.card {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    background: var(--card-background);
+    color: var(--card-text-color);
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 2px 21px -15px rgba(63, 63, 63, 0.5),
+                0px 2px 19px -13px rgba(63, 63, 63, 0.5),
+                0px 2px 14px -8px rgba(63, 63, 63, 0.5);
+}
+
+section.about-me .card {
+    width: 90%;
+    margin: calc(36px + 20px) auto;
+}
+
+.card.user > .photo-container {
+    position: relative;
+    height: 36px;
+}
+
+.card.user > .photo-container > img {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(-100% + 20px));
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 200px;
+}
+
+.card.user h3 {
+    margin: 0;
+}
+
+.card.user > .social-links ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    list-style-type: none;
+
+    padding: 0;
+}
+
+.card.user > .social-links ul li {
+    margin: 5px;
+}
+
+.card.user > .social-links ul li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card.user > .social-links ul li i {
+    font-size: 1.4rem;
+    margin-right: 5px;
+}
+
+.about-me .what-i-do {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form.contact {
+    position: relative;
+    width: 90%;
+
+    margin: 0 auto;
+}
+
+form .input-field {
+    position: relative;
+    width: 100%;
+
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+form .input-field input,
+form .input-field textarea {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Questrial";
+    font-size: 1.1rem;
+
+    padding: 20px 10px;
+    box-sizing: border-box;
+
+    border: solid 1px var(--ternary-color);
+    border-radius: 5px;
+
+    background-color: var(--input-background-color);
+    color: var(--input-text-color);
+
+    transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+form .input-field textarea {
+    min-height: 10rem;
+}
+
+form .input-field input:focus,
+form .input-field textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgba(255, 79, 121, 1);
+}
+
+form .input-field label {
+    position: absolute;
+    left: 10px;
+    top: 22px;
+
+    z-index: 2;
+
+    font-size: 1.1rem;
+
+    color: var(--input-label-color);
+
+    transform: scale(1);
+    transform-origin: left;
+
+    transition: all .35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+form .input-field *:focus + label,
+form .input-field *:not(:placeholder-shown) + label {
+    transform: translateY(-100%) scale(.8);
+    color: var(--input-hover-label-color);
 }
