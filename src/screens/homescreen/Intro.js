@@ -37,7 +37,7 @@ const Intro = ( { onRequestScroll } ) => {
                     <p className="home-bio">
                         I'm a passionate web developer who loves to
                         learn about new technologies, build memorable
-                        user experiences and watch football.
+                        user experiences and watch the stars.
                     </p>
                 </TimedTransition>
             </div>
