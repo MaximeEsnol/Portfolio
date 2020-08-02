@@ -8,7 +8,8 @@
     --ternary-color: #FF4F79;
     --ternary-color-lighter: #FFB49A;
 
-    --links-color: ;
+    --links-color: var(--ternary-color);
+    --links-color-hover: var(--ternary-color-darker);
 
     --divider-color: #aaabbf;
     --fab-color: var(--ternary-color);
@@ -26,5 +27,12 @@
     -menu-link-color: #fafafa;
     --menu-icon-color: var(--secondary-color);
 
-    --project-card-background: #0a0b1d;
+    --card-background: #fafafa;
+    --card-text-color: var(--primary-color);
+
+    --input-background-color: transparent;
+    --input-focus-background-color: #f2f2f2;
+    --input-text-color: var(--general-text-color);
+    --input-label-color: var(--general-text-color);
+    --input-hover-label-color: #b6b7e0;
 }
