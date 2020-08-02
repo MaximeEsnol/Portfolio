@@ -1,7 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router';
-import { Link, Switch, Route } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Route } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
 import ExperienceScreen from './screens/ExperienceScreen';
@@ -23,6 +21,8 @@ const AnimatedApp = props => {
                     <Route path={"/contact"} component={ContactScreen}/>
                 </AnimatedSwitch>
             </div>
+
+            <Footer/>
         </>
     )
 }
