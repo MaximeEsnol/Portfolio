@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import TextInput, { Textarea } from './TextInput';
 
 const ContactForm = ({ title }) => {
@@ -8,7 +8,9 @@ const ContactForm = ({ title }) => {
     const [ message, setMessage ] = useState("");
     const [ tags, setTags ] = useState(null);
 
-    const [ mailto, setMailto ] = useState("mailto:maxime.esnol02@gmail.com");
+    const mailtoPrefix = useRef("mailto:maxime.esnol02@gmail.com").current;
+
+    const [ mailto, setMailto ] = useState("");
 
     const [ buttonClass, setButtonClass ] = useState("disabled");
 
@@ -18,7 +20,7 @@ const ContactForm = ({ title }) => {
                 setButtonClass("");
             } 
 
-            let mail = "?subject=";
+            let mail = mailtoPrefix + "?subject=";
             mail += encodeURI("[Contact Form] [" + name + "]");
             mail += "&body=";
             mail += encodeURI(message);
@@ -29,6 +31,10 @@ const ContactForm = ({ title }) => {
             setButtonClass("disabled");
         }
     }, [message, name, email, tags]);
+
+    const openMail = () => {
+        window.open(mailto, "_blank");
+    }
 
     return (
         <form className="contact">
@@ -57,7 +63,10 @@ const ContactForm = ({ title }) => {
             onChangeText={(text) => setTags(text)}/>
 
 
-            <button disabled={(buttonClass === "disabled")} type="button" className={"button primary"}>
+            <button disabled={(buttonClass === "disabled")} 
+            type="button" 
+            className={"button primary"}
+            onClick={openMail}>
                 Send
             </button>
         </form>
