@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import SocialIcon from './SocialIcon';
 
-const SocialLinks = props => {
+const SocialLinks = ( { withUsername = false } ) => {
 
     const socialData = useRef( require("./../assets/data/social.json") );
 
@@ -9,7 +9,7 @@ const SocialLinks = props => {
         <div className="social-links">
             <ul>
                 { socialData.current.map( ( value, index ) => {
-                    return <SocialIcon key={index} social={value}/>
+                    return <SocialIcon key={index} social={value} withUsername={withUsername}/>
                 })}
             </ul>
         </div>
