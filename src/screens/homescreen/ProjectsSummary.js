@@ -39,7 +39,7 @@ const ProjectsSummary = React.forwardRef((props, ref) => {
 
                 {project != null &&
                 <>
-                    <ProjectPreview project={project}/>
+                    <ProjectPreview project={project} isAnimated={true}/>
                     <Link to={"/projects"} className="button primary more-projects-btn">
                         See more
                     </Link>
