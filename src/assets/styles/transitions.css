@@ -170,12 +170,12 @@
     animation-fill-mode: forwards;
 }
 
-.project.animated img{
+.project.animated .project-image{
     opacity: 0;
     transform: scale(.4);
 }
 
-.project.animated img.playing {
+.project.animated .project-image.playing {
     animation: project-image-appear 750ms ease-out;
     animation-fill-mode: forwards;
 }
