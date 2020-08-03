@@ -344,17 +344,33 @@ header .slide .social-links a:hover::after {
     flex-direction: column;
     
     box-sizing: border-box;
+    width: 100%;
     
     text-align: center;
 }
 
-.project-container .project img {
+.project h3 i {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-left: 10px;
+    transform: translateY(-2px);
+}
+
+.project-container .project .project-image {
+    position: relative;
     display: block;
 
     width: 90%;
+
     margin: 0 auto;
+    padding-top: 52.6%;
 
     border-radius: 5px;
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .project-container .project .project-description {
