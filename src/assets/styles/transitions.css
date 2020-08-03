@@ -170,32 +170,32 @@
     animation-fill-mode: forwards;
 }
 
-.project img{
+.project.animated img{
     opacity: 0;
     transform: scale(.4);
 }
 
-.project img.playing {
+.project.animated img.playing {
     animation: project-image-appear 750ms ease-out;
     animation-fill-mode: forwards;
 }
 
-.project .project-description h3 {
+.project.animated .project-description h3 {
     opacity: 0;
     transform: scale(1.2) translateY(200%);
 }
 
-.project .project-description h3.playing {
+.project.animated .project-description h3.playing {
     animation: project-title-appear 3000ms ease-out;
     animation-fill-mode: forwards;
 }
 
-.project .project-description p {
+.project.animated .project-description p {
     opacity: 0;
     transform: translateY(100px);
 }
 
-.project .project-description p.playing {
+.project.animated .project-description p.playing {
     animation: project-content-appear 1000ms ease-out;
     animation-fill-mode: forwards;
 }
