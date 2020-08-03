@@ -9,7 +9,10 @@
             "Spring"
         ],
         "images": [
-
+            {
+                "src": "onstage_1.PNG",
+                "alt": "Screenshot of a show from The Weeknd's After Hours tour in the OnStage application."
+            }
         ],
         "repository": [
             {
