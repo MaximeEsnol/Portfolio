@@ -5,8 +5,8 @@ import ProjectsScreen from './screens/ProjectsScreen';
 import ExperienceScreen from './screens/ExperienceScreen';
 import ContactScreen from './screens/ContactScreen';
 import AnimatedSwitch from './components/AnimatedSwitch';
-
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const AnimatedApp = props => {
     return (
