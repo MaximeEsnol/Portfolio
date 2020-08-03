@@ -42,6 +42,10 @@ h3 {
 h1 {
     font-size: 2.2rem;
     font-weight: 500;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2, h3 {
@@ -69,8 +73,11 @@ h3 {
 
 .home h1 {
     border-bottom: solid 1px var(--divider-color);
-    width: 80%;
     margin-bottom: 0;
+    width: 80%;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .home h1 + p {
@@ -520,4 +527,102 @@ form .input-field *:focus + label,
 form .input-field *:not(:placeholder-shown) + label {
     transform: translateY(-100%) scale(.8);
     color: var(--input-hover-label-color);
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+
+.timeline > .timeline-line-part {
+    position: absolute;
+    left: 33.5px;
+
+    background-color: var(--timeline-line-color);
+
+    border-radius: 100px;
+    
+    width: 16px;
+    height: 16px;
+}
+
+.timeline > .timeline-line-start {
+    top: -8px;
+}
+
+.timeline > .timeline-line-end {
+    bottom: -8px;
+}
+
+.timeline > .timeline-entry {
+    display: grid;
+    grid-template-columns: 64px auto;
+    
+    position: relative;
+    z-index: 4;
+    width: 100%;
+
+    margin-bottom: 64px;
+}
+
+.timeline > .timeline-entry > .timeline-entry-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-size: .8rem;
+
+    width: 64px;
+    height: 64px;
+
+    box-sizing: border-box;
+
+    border: solid 2px var(--timeline-line-color);
+    border-radius: 100px;
+    background-color: var(--primary-color);
+}
+
+.timeline > .timeline-entry > .timeline-entry-content {
+    position: relative;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+}
+
+.timeline > .timeline-entry > .timeline-entry-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 50px;
+    height: 4px;
+    background: var(--timeline-line-color);
+}
+
+.timeline > .timeline-entry > .timeline-entry-content > h2 {
+    text-align: left;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+
+    height: 100%;
+    width: 3px;
+
+    z-index: 0;
+
+    background-color: var(--timeline-line-color);
 }
