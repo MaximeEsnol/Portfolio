@@ -35,4 +35,6 @@
     --input-text-color: var(--general-text-color);
     --input-label-color: var(--general-text-color);
     --input-hover-label-color: #b6b7e0;
+
+    --timeline-line-color: #b6b7e0;
 }
