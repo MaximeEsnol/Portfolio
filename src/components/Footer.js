@@ -1,10 +1,20 @@
 import React from 'react';
-import StarSky from './StarSky';
 
 const Footer = props => {
 
     return(
         <>
+        </>
+    )
+}
+
+export const FixedFooter = ( { children, height, ...props } ) => {
+    return (
+        <>
+            <div className={"fixed-footer-height"} style={{height: height}}></div>
+            <div {...props} className={"fixed-footer"}>
+                { children }
+            </div>
         </>
     )
 }
