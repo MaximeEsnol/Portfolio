@@ -2,6 +2,7 @@
 @import url(./assets/styles/colors.css);
 @import url(./assets/styles/transitions.css);
 @import url(./assets/icons/fontawesome.min.css);
+@import url(./assets/styles/large.styles.css);
 
 html, body {
     margin: 0;
@@ -642,3 +643,85 @@ form .input-field *:not(:placeholder-shown) + label {
 
     background-color: var(--timeline-line-color);
 }
+
+.slides {
+    position: relative;
+    min-width: 100%;
+    white-space: nowrap;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.slides > .slide {
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    
+    scroll-snap-align: start;
+}
+
+.project-details .slides .slide {
+    padding-top: 52.6%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-details h1,
+.project-details > p.description,
+.project-details .about {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-details p.description {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.project-details .about > *{
+    font-family: "Questrial";
+}
+
+.project-details .technologies {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project-details .fixed-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-details .fixed-footer > a {
+    font-size: .7rem;
+    width: 100%;
+    margin: 0 5px;
+}
+
+.technology {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border: solid 2px var(--secondary-color-lighter);
+    border-radius: 5px;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+
+    width: 100vw;
+    
+    padding: 10px;
+    box-sizing: border-box;
+
+    background-color: var(--fixed-footer-background-color);
+
+    z-index: 10;
+}
+
