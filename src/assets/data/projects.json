@@ -36,14 +36,13 @@
             {
                 "src": "bsg_1.png",
                 "alt": "Screenshot of the Box Shadow Generator website."
-            }
-        ],
-        "repository": [
+            },
             {
-                "name": "Box Shadow Generator",
-                "url": "https://github.com/MaximeEsnol/BoxShadowGenerator"
+                "src": "bsg_2.png",
+                "alt":"Screenshot of the Box Shadow Generator website with the generated CSS shown."
             }
         ],
+        "repository": "https://github.com/MaximeEsnol/BoxShadowGenerator",
         "demo": "https://shadows.maximeesnol.dev"
     }
 ]
