@@ -830,4 +830,8 @@ form .input-field *:not(:placeholder-shown) + label {
         width: 50%;
         margin: 0 auto;
     }
+
+    #root .timeline-entry {
+        margin-bottom: 164px;
+    }
 }
