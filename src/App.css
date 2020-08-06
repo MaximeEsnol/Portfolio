@@ -834,4 +834,11 @@ form .input-field *:not(:placeholder-shown) + label {
     #root .timeline-entry {
         margin-bottom: 164px;
     }
+
+    #root .project-container .project-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
