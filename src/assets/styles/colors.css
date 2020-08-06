@@ -20,6 +20,7 @@
     --header-color: var(--secondary-color);
 
     --header-menu-background: #0f0f0f;
+    --header-menu-overlay-color: rgba(0,0,0,.50);
 
     --general-text-color: #fafafa;
     --general-text-color-less: #aaabbf;
@@ -39,4 +40,6 @@
     --timeline-line-color: #b6b7e0;
 
     --fixed-footer-background-color: #ffffff;
+
+    --slides-control-color: rgba(0,0,0,.50);
 }
