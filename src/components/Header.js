@@ -20,7 +20,7 @@ const Header = props => {
                 isFixedNav={true}
                 height={70}/>
 
-            <Menu isOpen={menuOpened}>
+            <Menu isOpen={menuOpened} triggerClose={toggleMenu}>
                 <ul className="site-links">
                     <li>
                         <Link to="/" onClick={toggleMenu}>Home</Link>
