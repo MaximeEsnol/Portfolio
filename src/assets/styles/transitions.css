@@ -176,7 +176,7 @@
 }
 
 .project.animated .project-image.playing {
-    animation: project-image-appear 750ms ease-out;
+    animation: project-image-appear 750ms cubic-bezier(0.16, 1, 0.3, 1);
     animation-fill-mode: forwards;
 }
 
@@ -186,7 +186,7 @@
 }
 
 .project.animated .project-description h3.playing {
-    animation: project-title-appear 3000ms ease-out;
+    animation: project-title-appear 3000ms cubic-bezier(0.16, 1, 0.3, 1);
     animation-fill-mode: forwards;
 }
 
@@ -196,7 +196,7 @@
 }
 
 .project.animated .project-description p.playing {
-    animation: project-content-appear 1000ms ease-out;
+    animation: project-content-appear 1000ms cubic-bezier(0.16, 1, 0.3, 1);
     animation-fill-mode: forwards;
 }
 
