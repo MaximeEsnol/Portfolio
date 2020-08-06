@@ -32,7 +32,7 @@ const ProjectDetailsScreen = props => {
     }, []);
 
     return(
-        <div className="project-details">
+        <section className="project-details">
             <Slides>
                 { project.images !== undefined && project.images.map((value, index) => {
                     return (
@@ -71,7 +71,7 @@ const ProjectDetailsScreen = props => {
                     </a>
                 }
             </FixedFooter>
-        </div>
+        </section>
     )
 }
 
