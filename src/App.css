@@ -644,6 +644,10 @@ form .input-field *:not(:placeholder-shown) + label {
     background-color: var(--timeline-line-color);
 }
 
+.slides-container > i {
+    display: none;
+}
+
 .slides {
     position: relative;
     min-width: 100%;
@@ -751,17 +755,17 @@ form .input-field *:not(:placeholder-shown) + label {
     }
 
     .overlay.enter-active{
-        background-color: rgba(0,0,0,.50);
+        background-color: var(--header-menu-overlay-color);
     }
 
     .overlay.enter-done {
         display: block;
-        background-color: rgba(0,0,0,.50);
+        background-color: var(--header-menu-overlay-color);
     }
 
     .overlay.exit {
         display: block;
-        background-color: rgba(0,0,0,.50);
+        background-color: var(--header-menu-overlay-color);
     }
 
     .overlay.exit-active {
@@ -840,5 +844,83 @@ form .input-field *:not(:placeholder-shown) + label {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    section.project-details {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        column-gap: 15px;
+        margin-top: 10px;
+    }
+
+    .project-details .slides,
+    .project-details h1,
+    .project-details p.description,
+    .project-details .technologies,
+    .project-details .fixed-footer {
+        grid-column: 1/2;
+    }
+
+    .project-details .about {
+        grid-column: 2/3;
+        grid-row: 1/9;
+    }
+
+    .project-details .slides .slide {
+        width: 100%;
+    }
+
+    .project-details .fixed-footer {
+        position: relative;
+        width: 100%;
+        background: transparent;
+    }
+
+    .project-details .fixed-footer-height {
+        height: 0px !important;
+    }
+
+    .slides-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .slides-container > .slides::-webkit-scrollbar {
+        display: none;
+    }
+
+    .slides-container:hover > i {
+        opacity: 1;
+    }
+    
+    .slides-container i {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        z-index: 5;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        width: 32px;
+        height: 32px;
+
+        border-radius: 50px;
+
+        background-color: var(--slides-control-color);
+
+        opacity: .4;
+
+        transition: opacity .25s ease-in-out;
+    }
+
+    .slides-container i:first-child {
+        left: 10px;
+    }
+
+    .slides-container i:nth-child(2) {
+        right: 10px;
     }
 }
