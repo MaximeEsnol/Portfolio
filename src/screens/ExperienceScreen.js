@@ -13,7 +13,7 @@ const ExperienceScreen = props => {
     const entriesSorted = entries.sort( (a, b) => new Date(b.date) - new Date(a.date) );
 
     return(
-        <div className="experience">
+        <section className="experience">
             <h1>My experience</h1>
 
             <Timeline>
@@ -31,7 +31,7 @@ const ExperienceScreen = props => {
                     )
             }) }
             </Timeline>
-        </div>
+        </section>
     )
 }
 
