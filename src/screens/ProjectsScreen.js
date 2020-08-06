@@ -9,7 +9,7 @@ const ProjectsScreen = props => {
     const projects = useRef(require("./../assets/data/projects.json")).current;
 
     return(
-        <div>
+        <section>
             <h1>My work</h1>
 
             {
@@ -17,7 +17,7 @@ const ProjectsScreen = props => {
                     return <ProjectPreview key={index} project={project}/>
                 })
             }
-        </div>
+        </section>
     )
 }
 
